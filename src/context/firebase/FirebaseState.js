@@ -34,10 +34,7 @@ export const FirebaseState = ({children}) => {
                 ...note,
                 id: res.data.name
             }
-            dispatch({
-                type: ADD_NOTE,
-                payload
-            })
+            dispatch({type: ADD_NOTE, payload})
         } catch (e) {
             throw new Error(e.message)
         }
